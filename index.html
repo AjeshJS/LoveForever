@@ -29,9 +29,9 @@
     body {
       font-family: 'Nunito', sans-serif;
       background-color: #fdfbfb;
-      background-image: 
-        radial-gradient(at 0% 0%, hsla(339, 100%, 85%, 0.6) 0, transparent 50%), 
-        radial-gradient(at 50% 0%, hsla(225, 100%, 85%, 0.6) 0, transparent 50%), 
+      background-image:
+        radial-gradient(at 0% 0%, hsla(339, 100%, 85%, 0.6) 0, transparent 50%),
+        radial-gradient(at 50% 0%, hsla(225, 100%, 85%, 0.6) 0, transparent 50%),
         radial-gradient(at 100% 0%, hsla(339, 100%, 85%, 0.6) 0, transparent 50%),
         radial-gradient(at 100% 50%, hsla(225, 100%, 85%, 0.6) 0, transparent 50%),
         radial-gradient(at 100% 100%, hsla(339, 100%, 85%, 0.6) 0, transparent 50%),
@@ -74,9 +74,17 @@
     }
 
     @keyframes meshAnim {
-      0% { background-position: 0% 0%; }
-      50% { background-position: 100% 100%; }
-      100% { background-position: 0% 0%; }
+      0% {
+        background-position: 0% 0%;
+      }
+
+      50% {
+        background-position: 100% 100%;
+      }
+
+      100% {
+        background-position: 0% 0%;
+      }
     }
 
     /* ───── LOCK SCREEN ───── */
@@ -397,8 +405,15 @@
     }
 
     @keyframes pulse-soft {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.03); }
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.03);
+      }
     }
 
     .teddy-hug-img {
@@ -451,8 +466,7 @@
     }
 
     /* ───── LETTER ───── */
-    #letter {
-    }
+    #letter {}
 
     .envelope-wrap {
       text-align: center;
@@ -587,8 +601,7 @@
     }
 
     /* ───── MEMORY WALL ───── */
-    #memories {
-    }
+    #memories {}
 
     .memory-intro {
       text-align: center;
@@ -839,8 +852,7 @@
     }
 
     /* ───── SCRATCH ───── */
-    #scratch {
-    }
+    #scratch {}
 
     .scratch-grid {
       display: grid;
@@ -917,8 +929,7 @@
     }
 
     /* ───── WISH JAR ───── */
-    #wishjar {
-    }
+    #wishjar {}
 
     .jar-wrap {
       text-align: center;
@@ -1245,8 +1256,7 @@
     }
 
     /* ───── ANIMATED BG GRADIENT ───── */
-    #s-hero {
-    }
+    #s-hero {}
 
     @keyframes heroBgShift {
       0% {
@@ -1801,7 +1811,7 @@
     #s-candle {
       color: white;
       text-align: center;
-      background: rgba(0,0,0,0.4);
+      background: rgba(0, 0, 0, 0.4);
       backdrop-filter: blur(10px);
     }
 
@@ -2029,6 +2039,7 @@
     <div class="nav-dot" onclick="scrollTo_(5)"></div>
     <div class="nav-dot" onclick="scrollTo_(6)"></div>
     <div class="nav-dot" onclick="scrollTo_(7)"></div>
+    <div class="nav-dot" onclick="scrollTo_(8)"></div>
   </nav>
 
   <div class="doodle-container" id="doodle-container"></div>
@@ -2064,7 +2075,8 @@
   <!-- ════ SECTION 3 · BLOW THE CANDLE ════ -->
   <section id="s-candle">
     <div class="content">
-      <h2 class="section-title reveal" style="color:var(--yellow); text-shadow: 0 0 10px rgba(255,217,61,0.5);">Happy Birthday harshuma 🎂</h2>
+      <h2 class="section-title reveal" style="color:var(--yellow); text-shadow: 0 0 10px rgba(255,217,61,0.5);">Happy
+        Birthday harshuma 🎂</h2>
       <p class="reveal" style="color: rgba(255,255,255,0.8); margin-bottom: 20px;">Close your eyes, make a wish, and
         blow into your microphone!</p>
 
@@ -2088,7 +2100,7 @@
       </div>
     </div>
   </section>
-  
+
   <!-- ════ SECTION 3.5 · FINALE (CELEBRATE) ════ -->
   <section id="s-finale">
     <div class="bg-shapes">
@@ -2163,12 +2175,59 @@
     </div>
   </section>
 
+  <!-- ════ SECTION 6.5 · LETTER ════ -->
+  <section id="s-letter">
+    <div class="content">
+      <h2 class="section-title reveal" style="color:var(--purple)">💌 A Little Note for You</h2>
+      <div class="envelope-wrap reveal-scale">
+        <div class="envelope-container">
+          <div class="envelope" id="envelope" onclick="openEnvelope()">
+            <div class="env-flap" id="env-flap"></div>
+            <div class="env-left"></div>
+            <div class="env-right"></div>
+            <div class="env-body">
+              <span class="env-heart">💖</span>
+            </div>
+          </div>
+          <button class="open-btn" id="open-btn" onclick="openEnvelope()">Open Letter</button>
+        </div>
+
+        <div class="letter-content" id="letter-content">
+          <p>My Dearest Love,</p>
+          <p>I have watched you carry so much — quietly, gracefully, without complaint. And I need you to know: I see it. Every bit of it.</p>
+          <p>You of all people know that the most beautiful things are never made easily. The yarn tangles, the stitches unravel — but you never put it down. You are the same way with life. You keep going, even when it's hard. Especially when it's hard.</p>
+          <p>The storms you've been walking through are not your forever. They are ending. And what's coming for you — the peace, the ease, the joy you deserve — it's already on its way.</p>
+          
+          <div style="text-align: center; margin: 20px 0; color: var(--pink); font-style: italic;">~ ✿ ~</div>
+          
+          <p style="text-align: center; font-style: italic; color: #555;">
+            The thread you hold, though frayed, holds true —<br>
+            And spring is already on its way to you.<br>
+            Hold on, my love — the finish row draws near,<br>
+            And what you've made will be too beautiful for tears.
+          </p>
+          
+          <div style="text-align: center; margin: 20px 0; color: var(--pink); font-style: italic;">~ ✿ ~</div>
+          
+          <p>You are the best — at your craft, and at being you. Your hands create beauty from nothing, and your heart does the same for everyone around you.</p>
+          <p>Happy Birthday, my love. Your brightest chapter begins now, and I'll be right here beside you for all of it.</p>
+          
+          <div class="letter-sig">
+            Yours, always —<br>
+            <span style="font-size: 0.9rem; font-family: 'Nunito', sans-serif;">With every beat of my heart 🌹</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ════ SECTION 7 · LOVE U ════ -->
   <section id="s-loveu">
     <div class="content" style="text-align:center">
       <h2 class="section-title reveal" style="color:var(--pink); font-size: 3.5rem;">Love u ❤️</h2>
       <p class="reveal" style="font-size: 1.2rem; color: #666;">Forever and always.</p>
-      <img src="teddy.gif" alt="Teddy Hug" class="reveal teddy-hug-img" style="width: min(300px, 80vw); margin-top: 30px; border-radius: 24px; box-shadow: 0 20px 40px rgba(255, 107, 157, 0.2);">
+      <img src="teddy.gif" alt="Teddy Hug" class="reveal teddy-hug-img"
+        style="width: min(300px, 80vw); margin-top: 30px; border-radius: 24px; box-shadow: 0 20px 40px rgba(255, 107, 157, 0.2);">
     </div>
   </section>
 
@@ -2258,7 +2317,7 @@
     // ══════════════════════════════════════════════
     // NAV DOTS
     // ══════════════════════════════════════════════
-    const secIds = ['s-hero', 's-birthday', 's-candle', 's-finale', 's-wishjar', 's-memories', 's-scratch', 's-loveu'];
+    const secIds = ['s-hero', 's-birthday', 's-candle', 's-finale', 's-wishjar', 's-memories', 's-scratch', 's-letter', 's-loveu'];
     const dots = document.querySelectorAll('.nav-dot');
     function scrollTo_(i) { document.getElementById(secIds[i]).scrollIntoView({ behavior: 'smooth' }); }
     let adShown = false;
@@ -2347,7 +2406,7 @@
       grid.appendChild(div);
       memCount++;
     }
-    
+
     // Preload p1-p6 as requested
     ['p1.jpeg', 'p2.jpeg', 'p3.jpeg', 'p4.jpeg', 'p5.jpeg', 'p6.jpeg'].forEach(src => addMemSlot(null, src));
 
@@ -2902,11 +2961,11 @@
     function initDoodles() {
       const container = document.getElementById('doodle-container');
       const doodleFiles = ['b1.png', 'b2.png', 'b3.png', 'b4.png', 'b5.png', 'b6.png'];
-      
+
       // Use a grid-based approach with jitter to prevent overlaps
       const rows = 15;
       const cols = 6;
-      
+
       for (let r = 0; r < rows; r++) {
         for (let c = 0; c < cols; c++) {
           // Skip some cells randomly to make it look less like a grid
@@ -2915,20 +2974,20 @@
           const d = document.createElement('img');
           d.src = doodleFiles[(r * cols + c) % doodleFiles.length];
           d.className = 'doodle-sticker';
-          
+
           // Position within cell with significant jitter
           const left = (c * (100 / cols)) + (Math.random() * (60 / cols)) + 5;
           const top = (r * (100 / rows)) + (Math.random() * (60 / rows)) + 2;
-          
+
           const rot = (Math.random() - 0.5) * 90;
-          const scale = 0.4 + Math.random() * 0.8; 
+          const scale = 0.4 + Math.random() * 0.8;
           const op = 0.07 + Math.random() * 0.1;
-          
+
           d.style.left = `${left}%`;
           d.style.top = `${top}%`;
           d.style.transform = `rotate(${rot}deg) scale(${scale})`;
           d.style.opacity = op;
-          
+
           container.appendChild(d);
         }
       }
